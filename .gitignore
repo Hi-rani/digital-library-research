@@ -1,0 +1,21 @@
+# Sensitive and raw data files
+*.xls
+*.xlsx
+*.csv
+*.json
+data/
+scripts/
+*.py
+*.env
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.tmp
+
+# Documentation unnecessary for static site
+analysis_plan.md
+data_dictionary.md
+data_quality_report.md
+validation_report.md
