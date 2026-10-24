@@ -36,7 +36,7 @@
             <div class="cover-meta-item"><strong>분석 기간</strong> 2016년 ~ 2025년 (10개년)</div>
             <div class="cover-meta-item"><strong>연구 영역</strong> 문헌정보학 / 데이터 리터러시</div>
           </div>
-          <div class="explainer-box" style="margin-top: 24px; display: inline-block; max-width: 680px; text-align: center;">
+          <div class="explainer-box" style="margin-top: 24px; display: inline-block; max-width: 720px; text-align: center;">
             <strong>연구 핵심:</strong> 책을 대출하던 물리적 도서관에서 AI와 리터러시 중심의 지능형 디지털 허브로 거듭난 10년간의 학술 패러다임 변화를 데이터로 규명합니다.
           </div>
         </section>
@@ -208,13 +208,13 @@
         <!-- Slide 5: 데이터 구성 및 분석 프로세스 -->
         <section class="slide" id="slide-5">
           <div class="slide-title-area">
-            <h2 class="slide-title">데이터 구성 및 분석 프로세스</h2>
+            <h2 class="slide-title">데이터 구성 및 분석 프로세스 로드맵</h2>
             <p class="slide-subtitle">재현 가능한 Python 정량 계량서지학 및 한국어 형태소 텍스트 마이닝 파이프라인</p>
           </div>
           <div class="process-steps-row">
-            <div class="info-card">
+            <div class="info-card roadmap-card">
               <div class="info-card-header">
-                <span class="info-card-badge">STEP 1</span>
+                <span class="process-step-badge">1</span>
                 <h3 class="info-card-title">데이터 감사 및 정제</h3>
               </div>
               <div class="info-card-body">
@@ -229,10 +229,10 @@
                 </div>
               </div>
             </div>
-            <div class="info-card">
+            <div class="info-card roadmap-card">
               <div class="info-card-header">
-                <span class="info-card-badge">STEP 2</span>
-                <h3 class="info-card-title">계량서지 및 네트워크 분석</h3>
+                <span class="process-step-badge">2</span>
+                <h3 class="info-card-title">계량서지 및 지식망 분석</h3>
               </div>
               <div class="info-card-body">
                 <p>Pandas 및 NetworkX를 활용하여 다차원 통계와 지식 구조망을 모델링했습니다.</p>
@@ -246,9 +246,9 @@
                 </div>
               </div>
             </div>
-            <div class="info-card">
+            <div class="info-card roadmap-card">
               <div class="info-card-header">
-                <span class="info-card-badge">STEP 3</span>
+                <span class="process-step-badge">3</span>
                 <h3 class="info-card-title">초록 형태소 및 토픽 분석</h3>
               </div>
               <div class="info-card-body">
@@ -343,14 +343,14 @@
           </div>
           <div class="slide-content-split">
             <div class="chart-container">
-              <img src="figures/fig1_yearly_publications.png" alt="연도별 논문 발행 추이 차트" class="chart-image">
+              <img src="figures/fig1_yearly_publications.svg" alt="연도별 논문 발행 추이 차트" class="chart-image">
             </div>
             <div class="info-card">
               <div class="info-card-header">
                 <span class="info-card-badge">분석 A</span>
                 <h3 class="info-card-title">연도별 발행 통계 및 시계열 특징</h3>
               </div>
-              <div class="data-table-wrapper" style="max-height: 190px;">
+              <div class="data-table-wrapper" style="max-height: 180px;">
                 <table class="data-table">
                   <thead>
                     <tr><th>연도</th><th>편수</th><th>비율(%)</th><th>시계열 특징</th></tr>
@@ -370,7 +370,12 @@
                 </table>
               </div>
               <div class="chart-caption-box">
-                <strong>핵심 결과 & 의미:</strong> 10년간 연평균 21.3편이 발표되었습니다. 특히 <strong>후기(2022~2025년) 4개년에 전체의 46.5%(99편)가 집중</strong>되었으며, <strong>2023년에는 28편으로 역대 최다</strong>를 기록했습니다. 팬데믹 이후 가속화된 디지털 전환과 생성형 AI의 등장이 연구 활성화를 견인했습니다.
+                <strong>핵심 메시지:</strong> 10년간 연평균 21.3편이 발표되었습니다. 특히 <strong>후기(2022~2025년) 4개년에 전체의 46.5%(99편)가 집중</strong>되었으며, <strong>2023년에는 28편으로 역대 최다</strong>를 기록했습니다.
+              </div>
+              <div class="chart-meta-grid">
+                <div class="meta-item"><span class="meta-label">단위 / 분모</span> <span class="meta-val">편, % / 전체 N=213편 전수</span></div>
+                <div class="meta-item"><span class="meta-label">데이터 출처</span> <span class="meta-val">한국연구재단 KCI (기준: 2026-10-24)</span></div>
+                <div class="meta-item" style="grid-column: span 2;"><span class="meta-label">해석 주의점</span> <span class="meta-val">다운로드 시점 메타데이터인 '반출일'은 배제하고 공식 '발행연도' 기준으로만 집계함.</span></div>
               </div>
             </div>
           </div>
@@ -384,7 +389,7 @@
           </div>
           <div class="slide-content-split">
             <div class="chart-container">
-              <img src="figures/fig2_top_keywords.png" alt="상위 키워드 차트" class="chart-image">
+              <img src="figures/fig2_top_keywords.svg" alt="상위 키워드 차트" class="chart-image">
             </div>
             <div class="info-card">
               <div class="info-card-header">
@@ -407,7 +412,12 @@
                   </li>
                 </ul>
                 <div class="chart-caption-box">
-                  <strong>핵심 결과 & 의미:</strong> 도서관 연구는 "디지털 시스템을 어떻게 지을까"라는 인프라 중심에서 벗어나, <strong>"이용자가 디지털 정보를 올바르게 비판·활용하는 역량('리터러시')"</strong>을 어떻게 길러줄 것인가로 완전히 전환되었습니다.
+                  <strong>핵심 메시지:</strong> 도서관 연구는 "시스템을 어떻게 지을까"라는 하드웨어 고민에서 벗어나, <strong>"이용자가 디지털 정보를 올바르게 비판·활용하는 역량('리터러시')"</strong>을 기르는 소프트웨어 교육 중심으로 전면 전환되었습니다.
+                </div>
+                <div class="chart-meta-grid">
+                  <div class="meta-item"><span class="meta-label">단위 / 분모</span> <span class="meta-val">편(DF), % / 키워드 유효 논문 N=210편</span></div>
+                  <div class="meta-item"><span class="meta-label">데이터 출처</span> <span class="meta-val">한국연구재단 KCI 저자키워드</span></div>
+                  <div class="meta-item" style="grid-column: span 2;"><span class="meta-label">해석 주의점</span> <span class="meta-val">한 논문 내 동일 키워드 중복 부여는 1회로 간주(문헌 빈도 DF 집계), 결측 3편 제외.</span></div>
                 </div>
               </div>
             </div>
@@ -472,7 +482,7 @@
           </div>
           <div class="slide-content-split">
             <div class="chart-container">
-              <img src="figures/fig3_keyword_yearly_trends.png" alt="주요 키워드 연도별 변화 차트" class="chart-image">
+              <img src="figures/fig3_keyword_yearly_trends.svg" alt="주요 키워드 연도별 변화 차트" class="chart-image">
             </div>
             <div class="info-card">
               <div class="info-card-header">
@@ -487,7 +497,12 @@
                   <li><strong>학교도서관:</strong> 독서교육 및 DLS 시스템을 중심으로 10개년 동안 꾸준히 발표되며 교육 현장의 디지털 접목 견인.</li>
                 </ul>
                 <div class="chart-caption-box">
-                  <strong>핵심 결과 & 의미:</strong> <strong>'디지털 리터러시'</strong>는 2020년을 기점으로 폭발적으로 치솟아 최상위를 유지하고 있으며, 최근에는 고등교육 혁신과 생성형 AI 도입에 힘입어 <strong>'대학도서관'</strong> 연구가 가장 가파른 상승 곡선을 그리고 있습니다.
+                  <strong>핵심 메시지:</strong> <strong>'디지털 리터러시'</strong>는 2020년을 기점으로 폭발적으로 치솟아 최상위를 유지하고 있으며, 최근에는 고등교육 혁신과 생성형 AI 도입에 힘입어 <strong>'대학도서관'</strong> 연구가 가장 가파른 상승 곡선을 그리고 있습니다.
+                </div>
+                <div class="chart-meta-grid">
+                  <div class="meta-item"><span class="meta-label">단위 / 분모</span> <span class="meta-val">연간 출현 논문 수 (편)</span></div>
+                  <div class="meta-item"><span class="meta-label">데이터 출처</span> <span class="meta-val">한국연구재단 KCI (2016~2025)</span></div>
+                  <div class="meta-item" style="grid-column: span 2;"><span class="meta-label">해석 주의점</span> <span class="meta-val">단일 시점 통계가 아닌 10개년 연속 시계열 데이터셋에 기반한 추세임.</span></div>
                 </div>
               </div>
             </div>
@@ -502,14 +517,14 @@
           </div>
           <div class="slide-content-split">
             <div class="chart-container">
-              <img src="figures/fig4_period_keyword_comparison.png" alt="시기별 키워드 점유율 비교 차트" class="chart-image">
+              <img src="figures/fig4_period_keyword_comparison.svg" alt="시기별 키워드 점유율 비교 차트" class="chart-image">
             </div>
             <div class="info-card">
               <div class="info-card-header">
                 <span class="info-card-badge">분석 D</span>
                 <h3 class="info-card-title">3개 시기별 패러다임 전환 (10개년 3단계)</h3>
               </div>
-              <div class="data-table-wrapper" style="max-height: 190px;">
+              <div class="data-table-wrapper" style="max-height: 180px;">
                 <table class="data-table">
                   <thead>
                     <tr><th>구분</th><th>주요 키워드</th><th>연구 성격 및 초점</th></tr>
@@ -534,7 +549,12 @@
                 </table>
               </div>
               <div class="chart-caption-box">
-                <strong>핵심 결과 & 의미:</strong> 지난 10년의 연구는 <strong>①'시스템을 만드는 시대'(초기)</strong>에서 <strong>②'누구나 차별 없이 쓰도록 돕는 시대'(중기)</strong>를 거쳐, <strong>③'인공지능과 대학 현장에 맞게 도서관을 바꾸는 시대'(후기)</strong>로 진화했습니다.
+                <strong>핵심 메시지:</strong> 지난 10년의 연구는 <strong>①'시스템을 만드는 시대'(초기)</strong>에서 <strong>②'누구나 차별 없이 쓰도록 돕는 시대'(중기)</strong>를 거쳐, <strong>③'인공지능과 대학 현장에 맞게 도서관을 바꾸는 시대'(후기)</strong>로 진화했습니다.
+              </div>
+              <div class="chart-meta-grid">
+                <div class="meta-item"><span class="meta-label">단위 / 분모</span> <span class="meta-val">시기별 점유율(%) / 초기 60편, 중기 51편*, 후기 99편</span></div>
+                <div class="meta-item"><span class="meta-label">데이터 출처</span> <span class="meta-val">한국연구재단 KCI 정규화 키워드</span></div>
+                <div class="meta-item" style="grid-column: span 2;"><span class="meta-label">해석 주의점</span> <span class="meta-val">모집단 크기가 다른 세 시기 간의 왜곡을 방지하기 위해 절대 편수가 아닌 '시기별 점유율(%)'로 표준화 비교함.</span></div>
               </div>
             </div>
           </div>
@@ -548,7 +568,7 @@
           </div>
           <div class="slide-content-split">
             <div class="chart-container">
-              <img src="figures/fig9_abstract_topics.png" alt="초록 TF-IDF 중요도 차트" class="chart-image">
+              <img src="figures/fig9_abstract_topics.svg" alt="초록 TF-IDF 중요도 차트" class="chart-image">
             </div>
             <div class="info-card">
               <div class="info-card-header">
@@ -571,7 +591,12 @@
                   </li>
                 </ul>
                 <div class="chart-caption-box">
-                  <strong>핵심 결과 & 의미:</strong> 초록 전체에서 TF-IDF 중요도가 가장 높은 단어는 <strong>'교육', '대학', '공간', '학교', '리터러시', '아카이브'</strong>였습니다. 인공지능 토픽 모델링 결과 또한 저자키워드 분석과 완벽히 일치하여 관종별 교육과 공간 혁신이 연구의 핵심축임을 입증합니다.
+                  <strong>핵심 메시지:</strong> 초록 전체에서 TF-IDF 중요도가 가장 높은 단어는 <strong>'교육', '대학', '공간', '학교', '리터러시', '아카이브'</strong>였습니다. 인공지능 토픽 모델링 결과 또한 저자키워드 분석과 완벽히 일치하여 관종별 교육과 공간 혁신이 연구의 핵심축임을 입증합니다.
+                </div>
+                <div class="chart-meta-grid">
+                  <div class="meta-item"><span class="meta-label">단위 / 분모</span> <span class="meta-val">TF-IDF 가중치 점수 / 유효 초록 N=210편</span></div>
+                  <div class="meta-item"><span class="meta-label">분석 도구</span> <span class="meta-val">Kiwi 형태소분석기 + Scikit-Learn LDA</span></div>
+                  <div class="meta-item" style="grid-column: span 2;"><span class="meta-label">해석 주의점</span> <span class="meta-val">단순 빈도가 아닌 흔한 단어를 걸러내는 TF-IDF 통계량을 적용함.</span></div>
                 </div>
               </div>
             </div>
@@ -586,7 +611,7 @@
           </div>
           <div class="slide-content-split">
             <div class="chart-container">
-              <img src="figures/fig6_keyword_network.png" alt="키워드 네트워크 구조 차트" class="chart-image">
+              <img src="figures/fig6_keyword_network.svg" alt="키워드 네트워크 구조 차트" class="chart-image">
             </div>
             <div class="info-card">
               <div class="info-card-header">
@@ -611,7 +636,12 @@
                   </li>
                 </ul>
                 <div class="chart-caption-box">
-                  <strong>핵심 결과 & 의미:</strong> 네트워크 지도는 <strong>①이용자 교육(리터러시)</strong>, <strong>②공간 및 서비스(관종별 도서관)</strong>, <strong>③콘텐츠 보호(저작권·라이선스)</strong>라는 3대 축이 유기적으로 맞물려 지식 생태계를 구축하고 있음을 보여줍니다.
+                  <strong>핵심 메시지:</strong> 네트워크 지도는 <strong>①이용자 교육(리터러시)</strong>, <strong>②공간 및 서비스(관종별 도서관)</strong>, <strong>③콘텐츠 보호(저작권·라이선스)</strong>라는 3대 축이 유기적으로 맞물려 지식 생태계를 구축하고 있음을 보여줍니다.
+                </div>
+                <div class="chart-meta-grid">
+                  <div class="meta-item"><span class="meta-label">단위 / 분모</span> <span class="meta-val">동시출현 빈도(회, Weight) / N=210</span></div>
+                  <div class="meta-item"><span class="meta-label">네트워크 도구</span> <span class="meta-val">NetworkX 3.7 (Spring Layout, Seed=42)</span></div>
+                  <div class="meta-item" style="grid-column: span 2;"><span class="meta-label">해석 주의점</span> <span class="meta-val">노이즈를 제거하기 위해 동시출현 빈도 2회 이상의 의미 있는 연결선(Edge)만 시각화함.</span></div>
                 </div>
               </div>
             </div>
@@ -621,38 +651,40 @@
         <!-- Slide 14: KCI 주제분야별 연구 분포 -->
         <section class="slide" id="slide-14">
           <div class="slide-title-area">
-            <h2 class="slide-title">KCI 주제분야별 연구 분포 (RQ4)</h2>
-            <p class="slide-subtitle">문헌정보학의 주도적 역할(52.1%)과 디자인·공학·인문학 등 47개 세부 분야의 다학제적 확산</p>
+            <h2 class="slide-title">KCI 주제분야별 연구 분포: 대분류 비교 및 세부 분야 (RQ4)</h2>
+            <p class="slide-subtitle">문헌정보학의 주도적 역할(52.1%)과 인문사회(68.1%) vs 공학기술(6.1%) 등 47개 세부 분야의 다학제적 확산</p>
           </div>
           <div class="slide-content-split">
             <div class="chart-container">
-              <img src="figures/fig5_subject_fields.png" alt="KCI 주제분야 분포 차트" class="chart-image">
+              <img src="figures/fig5_subject_fields.svg" alt="KCI 주제분야 분포 복합 차트" class="chart-image">
             </div>
             <div class="info-card">
               <div class="info-card-header">
                 <span class="info-card-badge">분석 E</span>
-                <h3 class="info-card-title">주제분야 점유율 및 다학제성 (N=213)</h3>
+                <h3 class="info-card-title">학문 대분류 구성 및 상위 분야 (N=213)</h3>
               </div>
-              <div class="data-table-wrapper" style="max-height: 200px;">
+              <div class="data-table-wrapper" style="max-height: 180px;">
                 <table class="data-table">
                   <thead>
-                    <tr><th>주제분야 (KCI 분류)</th><th>편수</th><th>점유율(%)</th></tr>
+                    <tr><th>학문 대분류 / 주요 분야</th><th>편수</th><th>점유율(%)</th><th>특징</th></tr>
                   </thead>
                   <tbody>
-                    <tr style="background-color: var(--primary-light);"><td><strong>문헌정보학 (본진)</strong></td><td><strong>111편</strong></td><td class="highlight-val"><strong>52.11%</strong></td></tr>
-                    <tr><td>디자인 (공간/정보/실내)</td><td>13편</td><td>6.10%</td></tr>
-                    <tr><td>기타인문학 / 사학</td><td>8편</td><td>3.76%</td></tr>
-                    <tr><td>한국어와문학</td><td>7편</td><td>3.29%</td></tr>
-                    <tr><td>컴퓨터학 / 소프트웨어</td><td>6편</td><td>2.82%</td></tr>
-                    <tr><td>전자/정보통신공학</td><td>5편</td><td>2.35%</td></tr>
-                    <tr><td>학제간연구</td><td>5편</td><td>2.35%</td></tr>
-                    <tr><td>사회과학일반 / 기록관리</td><td>8편</td><td>3.76%</td></tr>
-                    <tr><td>기타 (37개 학문 분야)</td><td>50편</td><td>23.47%</td></tr>
+                    <tr style="background-color: var(--primary-light);"><td><strong>사회과학 (문헌정보학 등)</strong></td><td><strong>125편</strong></td><td class="highlight-val"><strong>58.69%</strong></td><td>문헌정보학(111편) 중심</td></tr>
+                    <tr><td><strong>복합학 / 기타학</strong></td><td>40편</td><td>18.78%</td><td>학제간연구(5편) 및 융합</td></tr>
+                    <tr><td><strong>인문학 (어문학, 사학 등)</strong></td><td>20편</td><td>9.39%</td><td>디지털 아카이브 및 텍스트</td></tr>
+                    <tr><td><strong>예술체육 (실내/환경 디자인)</strong></td><td>15편</td><td>7.04%</td><td>도서관 공간 및 인테리어</td></tr>
+                    <tr><td><strong>공학 / 과학기술</strong></td><td>13편</td><td>6.10%</td><td>컴퓨터학(6편), 정보통신(5편)</td></tr>
+                    <tr style="border-top: 2px solid var(--border-color); font-weight: bold;"><td><strong>인문사회계열 합계</strong></td><td><strong>145편</strong></td><td class="highlight-val"><strong>68.08%</strong></td><td>사회과학(125) + 인문학(20)</td></tr>
                   </tbody>
                 </table>
               </div>
               <div class="chart-caption-box">
-                <strong>핵심 결과 & 의미:</strong> <code>문헌정보학</code>이 52.11%로 든든한 학문적 뿌리를 지탱하고 있으며, 나머지 <strong>47.89%(102편)는 실내디자인(공간 설계), 컴퓨터공학(검색 시스템), 어문학/역사학(디지털 아카이브)</strong> 등 47개 학문 분과가 참여하는 대표적인 다학제 융합 연구 분야입니다.
+                <strong>핵심 메시지:</strong> <strong>인문사회계열(사회과학+인문학)이 68.1%(145편)</strong>로 학술적 표준을 형성하고 있으며, <strong>실내디자인(공간 설계 7.0%), 컴퓨터·정보통신공학(시스템 기술 6.1%), 학제간연구(18.8%)</strong>가 긴밀히 결합된 다학제 융합 연구의 특성을 보입니다.
+              </div>
+              <div class="chart-meta-grid">
+                <div class="meta-item"><span class="meta-label">단위 / 분모</span> <span class="meta-val">편, % / 전체 N=213편 전수 (합계 100%)</span></div>
+                <div class="meta-item"><span class="meta-label">데이터 출처</span> <span class="meta-val">한국연구재단 KCI 표준 학문 분류</span></div>
+                <div class="meta-item" style="grid-column: span 2;"><span class="meta-label">해석 주의점</span> <span class="meta-val">KCI 공인 대분류 및 47개 세부 학문 분야 코드를 전수 집계하여 하위 항목의 합이 213편(100%)과 정확히 일치함.</span></div>
               </div>
             </div>
           </div>
@@ -662,16 +694,16 @@
         <section class="slide" id="slide-15">
           <div class="slide-title-area">
             <h2 class="slide-title">주요 게재 학술지 및 발행기관 분석 (RQ4 & G)</h2>
-            <p class="slide-subtitle">상위 4대 문헌정보학 전문 학회지에 44.6% 집중 및 다양한 전문 학술지 수록</p>
+            <p class="slide-subtitle">상위 4대 문헌정보학 전문 학회지에 44.6% 집중 및 발행기관 유형별(학회 80.3% vs 연구원 14.1%) 구성</p>
           </div>
           <div class="slide-content-split">
             <div class="chart-container">
               <div style="display: flex; gap: 8px; margin-bottom: 6px; width: 100%; justify-content: center;">
                 <button type="button" id="btnTabJournal" class="btn-nav" style="font-size: 11px; padding: 3px 8px; background-color: var(--primary-light); color: var(--primary); font-weight: bold;">학술지별 분포 (Fig 7)</button>
-                <button type="button" id="btnTabInst" class="btn-nav" style="font-size: 11px; padding: 3px 8px;">발행기관별 분포 (Fig 8)</button>
+                <button type="button" id="btnTabInst" class="btn-nav" style="font-size: 11px; padding: 3px 8px;">발행기관 유형 및 분포 (Fig 8)</button>
               </div>
-              <img id="chartJournal" src="figures/fig7_top_journals.png" alt="상위 학술지 차트" class="chart-image" style="display: block;">
-              <img id="chartInst" src="figures/fig8_top_institutions.png" alt="상위 발행기관 차트" class="chart-image" style="display: none;">
+              <img id="chartJournal" src="figures/fig7_top_journals.svg" alt="상위 학술지 차트" class="chart-image" style="display: block;">
+              <img id="chartInst" src="figures/fig8_top_institutions.svg" alt="상위 발행기관 차트" class="chart-image" style="display: none;">
             </div>
             <div class="info-card">
               <div class="info-card-header">
@@ -687,15 +719,17 @@
                     <br>• <code>한국비블리아학회지</code>: 13편 (6.10%, 4위)
                     <br><span style="font-size: 11.5px; color: var(--primary); font-weight: bold;">→ 4대 학회지 합계: 95편 (44.60%)</span>
                   </li>
-                  <li><strong>발행기관 집중도 (상위 4대 학회):</strong>
-                    <br>• 한국문헌정보학회 (35편), 한국도서관·정보학회 (29편), 한국정보관리학회 (21편), 한국비블리아학회 (13편)
-                  </li>
-                  <li><strong>다학제 전문 학술지 게재:</strong>
-                    <br>• <code>IJKCDT</code>: 8편 | <code>한국실내디자인학회 논문집</code>: 6편 | <code>JISTaP</code>: 5편
+                  <li><strong>발행기관 유형별 구성 (전체 213편):</strong>
+                    <br>• <code>전문학회</code>: 171편 (80.28%) | <code>연구원/연구소</code>: 30편 (14.08%) | <code>기타</code>: 12편 (5.63%)
                   </li>
                 </ul>
                 <div class="chart-caption-box">
-                  <strong>핵심 결과 & 의미:</strong> 문헌정보학 4대 학술지가 국내 디지털 도서관 연구의 표준 담론을 확고히 이끌고 있으며, 실내디자인 및 KISTI 학술지가 공간 구축과 데이터 사이언스 연구를 적극 뒷받침하고 있습니다.
+                  <strong>핵심 메시지:</strong> 문헌정보학 4대 학회지가 국내 디지털 도서관 연구의 표준 담론을 확고히 이끌고 있으며, 실내디자인학회 및 과학기술정보연구원(KISTI)이 공간 및 데이터 연구를 적극 뒷받침하고 있습니다.
+                </div>
+                <div class="chart-meta-grid">
+                  <div class="meta-item"><span class="meta-label">단위 / 분모</span> <span class="meta-val">편, % / 전체 90개 학술지 213편</span></div>
+                  <div class="meta-item"><span class="meta-label">데이터 출처</span> <span class="meta-val">KCI 게재 학술지 및 발행기관 메타</span></div>
+                  <div class="meta-item" style="grid-column: span 2;"><span class="meta-label">해석 주의점</span> <span class="meta-val">학회명과 학술지명이 1:1로 일치하지 않는 경우(예: 지식콘텐츠연구소 발행 IJKCDT 등)를 분리 정밀 집계함.</span></div>
                 </div>
               </div>
             </div>
@@ -841,13 +875,13 @@
         <!-- Slide 19: 결론 -->
         <section class="slide" id="slide-19">
           <div class="slide-title-area">
-            <h2 class="slide-title">결론 (Conclusion)</h2>
+            <h2 class="slide-title">결론 및 정책 발전 로드맵 (Conclusion)</h2>
             <p class="slide-subtitle">연구 질문에 대한 종합적 해답과 국내 디지털 도서관 발전 방향의 시사점</p>
           </div>
           <div class="slide-content-cards">
-            <div class="info-card">
+            <div class="info-card roadmap-card">
               <div class="info-card-header">
-                <span class="info-card-badge">결론 01</span>
+                <span class="process-step-badge">1</span>
                 <h3 class="info-card-title">이용자 역량 중심으로의 전이</h3>
               </div>
               <div class="info-card-body">
@@ -857,9 +891,9 @@
                 </div>
               </div>
             </div>
-            <div class="info-card">
+            <div class="info-card roadmap-card">
               <div class="info-card-header">
-                <span class="info-card-badge">결론 02</span>
+                <span class="process-step-badge">2</span>
                 <h3 class="info-card-title">관종별 현장 밀착형 지식 분화</h3>
               </div>
               <div class="info-card-body">
@@ -869,9 +903,9 @@
                 </div>
               </div>
             </div>
-            <div class="info-card">
+            <div class="info-card roadmap-card">
               <div class="info-card-header">
-                <span class="info-card-badge">결론 03</span>
+                <span class="process-step-badge">3</span>
                 <h3 class="info-card-title">기술 도입과 제도적 안전장치의 균형</h3>
               </div>
               <div class="info-card-body">
@@ -921,7 +955,7 @@
                   <li><strong>Kiwi (Kiwipiepy 0.24.1):</strong> 고성능 C++ 기반 한국어 형태소 분석기</li>
                   <li><strong>Scikit-Learn 1.9.1:</strong> TF-IDF 가중치 계산 및 LDA 잠재 토픽 모델링</li>
                   <li><strong>NetworkX 3.7:</strong> 키워드 동시 출현(Co-occurrence) 네트워크 모델링</li>
-                  <li><strong>Seaborn 0.13.2 & Matplotlib 3.11.2:</strong> 300 DPI 고해상도 학술 시각화 차트 제작</li>
+                  <li><strong>Seaborn 0.13.2 & Matplotlib 3.11.2:</strong> 300 DPI 고해상도 PNG 및 무손실 벡터 SVG 시각화 제작</li>
                   <li><strong>HTML5 / CSS3 / Vanilla JavaScript:</strong> 외부 의존성 없는 16:9 순수 로컬 프레젠테이션</li>
                 </ul>
               </div>
@@ -946,7 +980,7 @@
             <div class="closing-card">
               <div class="closing-card-title">열린 과학 (Open Science)</div>
               <div class="closing-card-body">
-                본 연구의 모든 서지 정제 규칙, Python 계량 통계 코드, 시각화 차트는 <strong>투명하고 재현 가능한 오픈 데이터</strong>로 관리되어 높은 신뢰성을 보장합니다.
+                본 연구의 모든 서지 정제 규칙, Python 계량 통계 코드, 고해상도 SVG 시각화 차트는 <strong>투명하고 재현 가능한 오픈 데이터</strong>로 관리되어 높은 신뢰성을 보장합니다.
               </div>
             </div>
             <div class="closing-card">
@@ -980,7 +1014,7 @@
             <option value="1">02. 연구 배경과 분석 목적</option>
             <option value="2">03. 연구 질문 (RQ1~RQ6)</option>
             <option value="3">04. 데이터 출처와 수집 범위</option>
-            <option value="4">05. 데이터 구성 및 분석 방법</option>
+            <option value="4">05. 데이터 구성 및 분석 프로세스</option>
             <option value="5">06. 데이터 품질 점검 결과</option>
             <option value="6">07. 연도별 논문 발행 추이</option>
             <option value="7">08. 전체 기간 핵심 키워드</option>
@@ -994,7 +1028,7 @@
             <option value="15">16. 주요 발견 종합 (1): 발행 추이와 리터러시</option>
             <option value="16">17. 주요 발견 종합 (2): 대학도서관과 지식망</option>
             <option value="17">18. 분석의 한계와 후속 연구 제안</option>
-            <option value="18">19. 결론</option>
+            <option value="18">19. 결론 및 정책 로드맵</option>
             <option value="19">20. 참고자료</option>
             <option value="20">21. 경청해 주셔서 감사합니다 (Q&A)</option>
           </select>
