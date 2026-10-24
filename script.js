@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressBar = document.getElementById('progressBar');
   const btnFullscreen = document.getElementById('btnFullscreen');
 
-  // URL Hash 지원 (#slide-1 ~ #slide-19)
+  // URL Hash 지원 (#slide-1 ~ #slide-21)
   function getSlideFromHash() {
     const hash = window.location.hash;
     if (hash && hash.startsWith('#slide-')) {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return 0;
   }
 
-  // 숫자 카운트업 애니메이션
+  // 숫자 카운트업 애니메이션 (글자 깨짐 방지 & 부드러운 이징)
   function animateCountUps(slideElement) {
     const counters = slideElement.querySelectorAll('.counter-val');
     counters.forEach((el) => {
@@ -35,10 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!targetStr) return;
 
       const isFloat = targetStr.includes('.');
+      const decimals = isFloat ? targetStr.split('.')[1].length : 0;
       const target = parseFloat(targetStr);
       if (isNaN(target)) return;
 
-      const duration = 750; // ms
+      const duration = 600; // ms
       const startTime = performance.now();
       const prefix = el.getAttribute('data-prefix') || '';
       const suffix = el.getAttribute('data-suffix') || '';
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentVal = target * ease;
 
         if (isFloat) {
-          el.textContent = `${prefix}${currentVal.toFixed(targetStr.split('.')[1].length)}${suffix}`;
+          el.textContent = `${prefix}${currentVal.toFixed(decimals)}${suffix}`;
         } else {
           el.textContent = `${prefix}${Math.round(currentVal)}${suffix}`;
         }
@@ -67,25 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 막대그래프 성장 애니메이션
+  // 막대그래프 성장 애니메이션 (anime.js 스타일 모션)
   function animateStatBars(slideElement) {
     const bars = slideElement.querySelectorAll('.stat-bar-fill');
     bars.forEach((bar) => {
       const targetWidth = bar.getAttribute('data-width');
       if (!targetWidth) return;
       bar.style.width = '0%';
-      // 약간의 지연 후 확장
       setTimeout(() => {
         bar.style.width = targetWidth;
-      }, 100);
-    });
-  }
-
-  // 표 행 순차 등장 딜레이 부여
-  function animateTableRows(slideElement) {
-    const rows = slideElement.querySelectorAll('.data-table tbody tr');
-    rows.forEach((row, i) => {
-      row.style.animationDelay = `${i * 45}ms`;
+      }, 80);
     });
   }
 
@@ -97,10 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
     slides.forEach((slide, idx) => {
       if (idx === index) {
         slide.classList.add('active');
-        // 애니메이션 트리거
+        // 모션 애니메이션 트리거
         animateCountUps(slide);
         animateStatBars(slide);
-        animateTableRows(slide);
       } else {
         slide.classList.remove('active');
       }
@@ -108,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     currentSlide = index;
 
-    // UI 업데이트
+    // UI 상태 업데이트
     const slideNumber = index + 1;
     if (slideBadge) {
       slideBadge.textContent = `${slideNumber} / ${totalSlides}`;
@@ -168,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Slide 15: 학술지 / 발행기관 탭 전환
+  // 학술지 / 발행기관 탭 전환 (Slide 15)
   const btnTabJournal = document.getElementById('btnTabJournal');
   const btnTabInst = document.getElementById('btnTabInst');
   const chartJournal = document.getElementById('chartJournal');
@@ -200,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 키보드 내비게이션
   window.addEventListener('keydown', (e) => {
-    // 폼 요소 입력 중에는 키 이벤트 무시
     if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
       return;
     }
@@ -209,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'ArrowRight':
       case 'ArrowDown':
       case 'PageDown':
-      case ' ': // Spacebar
+      case ' ':
         e.preventDefault();
         nextSlide();
         break;
@@ -237,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 터치 스와이프 지원 (모바일/태블릿 대비)
+  // 터치 스와이프 지원
   let touchStartX = 0;
   let touchEndX = 0;
   const slideFrame = document.querySelector('.slide-frame');

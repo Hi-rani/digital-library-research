@@ -19,8 +19,8 @@
 
 ```
 digital-library-research/
-├── index.html                      # 발표용 16:9 HTML 슬라이드 (총 20장, 감사합니다 슬라이드 포함)
-├── styles.css                      # 모던 학술 프레젠테이션 CSS 스타일시트 (흰색 테마)
+├── index.html                      # 발표용 16:9 HTML 슬라이드 (총 21장, 스크롤 없는 와이드 최적화)
+├── styles.css                      # 모던 학술 프레젠테이션 CSS 스타일시트 (화이트 테마)
 ├── script.js                       # 슬라이드 내비게이션, 키보드 조작, 애니메이션 스크립트
 ├── README.md                       # 프로젝트 개요 및 사용 가이드
 │
